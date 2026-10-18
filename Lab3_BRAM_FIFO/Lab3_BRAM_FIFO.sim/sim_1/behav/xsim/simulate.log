@@ -1,0 +1,10 @@
+Time resolution is 1 ps
+Reset test passed
+All 1's write test passed
+All 1s read test passed
+All 0s test passed
+Alternating pattern test passed
+Memory location test passed
+Status-flag tests passed
+PASS: ALL FIFO test completed successfully
+$finish called at time : 5331 ns : File "C:/Users/domev/ECE520/Lab3_BRAM_FIFO/Lab3_BRAM_FIFO.srcs/sim_1/new/tb_sc_fifo.v" Line 280

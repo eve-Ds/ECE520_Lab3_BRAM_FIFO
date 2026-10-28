@@ -1,14 +1,14 @@
 # ECE520_Lab3_BRAM_FIFO
 
-#Overview
+# Overview
 In this lab, students must implement a parameterized, single-clock FIFO that uses Block RAM (BRAM) for its internal memory in Verilog. The BRAM can be inferred or instantiated, and students are allowed to use the Block Memory Generator IP. Students must write a self-checking testbench to verify the functionality of the FIFO design and generate a text file containing input data for the FIFO to use in simulation using Python. A Tcl script must also be written to automate the creation of the Vivado project. 
 
-#Design Summary
+# Design Summary
   I implemented the parameterizable single-clock FIFO that uses Black RAM inference for its internal memory. I inferred the BRAM into my FIFO design by following the RAM_STYLE Verilog example provided by Vivado. The example is as follows: 
   (* ram_style = "ultra" *) reg [data_size-1:0] myram [2**addr_size-1:0]; 
 A counter was created to keep track of the current number of values stored in the FIFO and to generate the FIFO status signals such as EMPTY, FULL, and ALMOST_FULL. 
 
-#Verification and Results
+# Verification and Results
 I verified by design by testing the following cases in my testbench:
 - Output returns to 0 after reset is asserted
 - Write all 1s and reading out all 1s, then writing all 0s and reading out all 0s
@@ -22,8 +22,9 @@ I verified by design by testing the following cases in my testbench:
 
 
 
-#Known Issues or Limitations
+# Known Issues or Limitations
 I was able to generate the Vivado file using a Tcl script, but when I went back to generate the file again, it was not able to regenerate. 
 
-#Refernces
+# Refernces
+
 https://docs.amd.com/r/en-US/ug901-vivado-synthesis/Attributes-for-Controlling-UltraRAM

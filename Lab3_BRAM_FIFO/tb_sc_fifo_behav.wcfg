@@ -11,13 +11,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="5,214.942 ns"></ZoomStartTime>
-      <ZoomEndTime time="5,422.134 ns"></ZoomEndTime>
-      <Cursor1Time time="5,331.000 ns"></Cursor1Time>
+      <ZoomStartTime time="987.167 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,191.968 ns"></ZoomEndTime>
+      <Cursor1Time time="86.300 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="661"></NameColumnWidth>
-      <ValueColumnWidth column_width="329"></ValueColumnWidth>
+      <NameColumnWidth column_width="358"></NameColumnWidth>
+      <ValueColumnWidth column_width="336"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="16" />
    <wvobject fp_name="/tb_sc_fifo/CLK" type="logic">
@@ -71,6 +71,7 @@
    <wvobject fp_name="/tb_sc_fifo/i" type="array">
       <obj_property name="ElementShortName">i[31:0]</obj_property>
       <obj_property name="ObjectShortName">i[31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_sc_fifo/WIDTH" type="array">
       <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>

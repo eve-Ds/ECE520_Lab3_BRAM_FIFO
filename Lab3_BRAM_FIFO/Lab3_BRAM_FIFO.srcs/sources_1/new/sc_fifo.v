@@ -49,6 +49,7 @@ module sc_fifo#(
  //address width
  localparam integer ADDR_SIZE = (DEPTH <= 1) ? 1 : $clog2(DEPTH);
  
+ //Implementing BRAM
  // From: https://docs.amd.com/r/en-US/ug901-vivado-synthesis/Attributes-for-Controlling-UltraRAM
  (* ram_style = "block" *) reg [WIDTH-1:0] myram [0:DEPTH-1];
  reg [ADDR_SIZE-1:0] write_pointer;
@@ -81,10 +82,8 @@ assign DATA_OUT = data_bus_pipeline[READ_LATENCY-1];
 assign VALID    = valid_pipeline [READ_LATENCY-1];
 
 always @(posedge CLK) begin
-// write_en_reg <= wr_en && !full;
-//rd_en)reg <= rd_en && !empty;
 
-
+//Reset
 if (SRST) begin
     write_pointer <= {ADDR_SIZE{1'b0}};
     read_pointer <= {ADDR_SIZE{1'b0}};
@@ -95,8 +94,9 @@ if (SRST) begin
         valid_pipeline[i] <= 1'b0;
     end
 end
-
+//FIFO Operation
 else begin 
+//Write data and store in memory
     if (write_en_reg) begin
         myram[write_pointer] <= DATA_IN;
         
@@ -124,8 +124,9 @@ else begin
         valid_pipeline[i] <= valid_pipeline[i-1];
     end
     
+    //FIFO Counter
     case ({write_en_reg, read_en_reg})
-        2'b10: begin
+        2'b10: begin 
             count <= count + 1'b1;
         end
         

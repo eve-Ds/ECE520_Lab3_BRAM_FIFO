@@ -96,7 +96,6 @@ initial begin
     
     #1;
     
-    
     // Reset
     if (DATA_OUT !== 0) begin
         $display("ERROR: DATA_OUT is not zero after reset");

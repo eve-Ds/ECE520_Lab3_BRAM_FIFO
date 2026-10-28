@@ -9,7 +9,7 @@ In this lab, students must implement a parameterized, single-clock FIFO that use
 A counter was created to keep track of the current number of values stored in the FIFO and to generate the FIFO status signals such as EMPTY, FULL, and ALMOST_FULL. 
 
 # Verification and Results
-I verified by design by testing the following cases in my testbench:
+I verified my design by testing the following cases in my testbench:
 - Output returns to 0 after reset is asserted
 - Write all 1s and reading out all 1s, then writing all 0s and reading out all 0s
 - Alternating bit patterns
